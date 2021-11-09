@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSMOS > CONTACT US</title>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<style>
+    /*-----------Scroll Bar--------  */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        border: 7px solid darkslateblue;
+        box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg,
+                #06dee1,
+                #79ff6c);
+        border-radius: 1rem;
+    }
+
+    /*------x---------Scroll Bar----x------ */
+
+    body {
+        /* background-image: url("background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; */
+        background-color: #151515;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: 'Roboto', sans-serif;
+        font-size: 10px;
+    }
+
+    header {
+        background-color: #151515;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: background-color .5s ease;
+        z-index: 1000;
+        border-bottom: 3px solid white;
+        opacity: 1;
+    }
+
+    .container1 {
+        padding: 0;
+        background-color: #151515;
+        margin-left: auto;
+        margin-right: 9rem;
+    }
+
+    .nav {
+        width: 100%;
+        height: 9rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid rgba(255, 255, 255, .05);
+        transition: height .5s ease;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.6rem;
+    }
+
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+        margin-right: auto;
+        margin-left: 4rem;
+    }
+
+    .nav-link {
+        margin: 0 2rem;
+        position: relative;
+    }
+
+    .nav-link::after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .5s ease-in-out;
+    }
+
+    .nav-link:hover::after {
+        transform: scaleX(1);
+    }
+
+
+
+    /*Apply styles after scroll*/
+    .scrolling-active {
+
+        box-shadow: 0 3px 1rem rgba(0, 0, 0, .1);
+    }
+
+    .scrolling-active .nav {
+        height: 6.6rem;
+    }
+
+    .scrolling-active .nav a {
+        color: white;
+    }
+
+    .scrolling-active .search-opt {
+        height: 30px;
+        top: 33px;
+
+    }
+
+    .scrolling-active .search-btn {
+        height: 30px;
+
+    }
+
+    .scrolling-active .nav-link::after {
+        background-color: white;
+    }
+
+    /*Apply styles after scroll end*/
+
+    .divider-symbol {
+        display: inline-block;
+        width: 2px;
+        height: 29px;
+        background-color: white;
+        margin: -6px 0;
+    }
+
+
+
+
+
+    /* .search-opt::after {
+        position: fixed;
+        
+    } */
+
+    .search-opt {
+        left: 49%;
+        background: #ffffff;
+        height: 35px;
+        border-radius: 5px;
+        padding: 10px;
+        top: 47px;
+        transition-delay: .1s;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        ;
+    }
+
+    .search-btn {
+        /* display: block; */
+        position: relative;
+        float: right;
+        /* color: green; */
+        width: 40px;
+        height: 35px;
+        border-radius: 10%;
+        background: #151515;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: 0.4s;
+    }
+
+    .search-opt:hover>#searchin-opt {
+        width: 240px;
+        padding: 0px 6px;
+    }
+
+    .search-opt:hover>.search-btn {
+        background: white;
+        color: #151515;
+    }
+
+    #searchin-opt {
+        border: none;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0px;
+        font-size: 16px;
+        color: black;
+        /* font-weight: 600; */
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+    }
+
+    /* .only-for-search-icon {
+        font-size: 16px;
+        font-weight: 700;
+    } */
+
+
+
+
+
+    section.contactus-box {
+        /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+        /* position: relative;
+    */
+        /* float: left; */
+        background-position-x: center;
+        border-bottom: 3px solid white;
+        box-sizing: content-box;
+        margin-bottom: 1rem;
+
+    }
+
+    section.contactus-box div.contact-title {
+        margin-top: 10rem;
+        /* padding: 1rem 1rem; */
+
+    }
+
+    h1 {
+        color: white;
+        font-family: 'Secular One', sans-serif;
+        font-size: 42px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 700;
+        line-height: 26.4px;
+        margin-left: 10rem;
+    }
+
+    .span-for-all {
+        color: white;
+        font-family: 'Secular One', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 700;
+        line-height: 26.4px;
+        margin-left: 6rem;
+
+    }
+
+    .username-title,
+    .message-title,
+    .email-title {
+        padding: 1.5rem 1rem;
+    }
+
+    .input-for-all {
+        margin-left: 18rem;
+        /* height: 31px; */
+        width: 371px;
+        font-family: 'Secular One', sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 300;
+        line-height: 26.4px;
+        position: absolute;
+        /* border: ; */
+        border-radius: 6px;
+        padding: 6px;
+    }
+
+    .input-for-all:focus {
+        /* border-radius: 1rem; */
+        border: 3px solid #232526;
+
+    }
+
+    .only-username-input {
+        margin-left: 112px;
+    }
+
+    .only-email-input {
+        margin-left: 136px;
+        border: 2px solid #232526;
+    }
+
+    .only-message-input {
+        width: 764px;
+        height: 250px;
+        margin-left: 150px;
+        position: absolute;
+        border: 2px solid #232526;
+        /* font-weight: none; */
+        resize: none;
+    }
+
+    div.only-for-border input {
+        height: 49px;
+        /* margin: 18rem 21rem; */
+        margin-top: 24rem;
+        margin-left: 46rem;
+        width: 200px;
+        border-radius: 7px;
+        font-family: 'Secular One', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-variant: normal;
+        color: black;
+        font-weight: 700;
+        line-height: 26.4px;
+        background-image: linear-gradient(to right, #77A1D3, #79CBCA, #E684AE);
+        /* background-color: gainsboro; */
+        border: 2px solid #151515;
+        box-shadow: none;
+        cursor: pointer;
+
+    }
+
+    div.only-for-border input:hover {
+        /* border: 2px solid black; */
+        color: black;
+        background-image: linear-gradient(to right, #E684AE, #79CBCA, #77A1D3);
+        /* opacity: 10; */
+    }
+
+    section .only-for-border {
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+
+    }
+
+    .username-title {
+        border-top: 3px solid white;
+    }
+
+
+    .image img {
+        height: 139px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 672px;
+        margin-left: 41rem;
+        margin-top: 20rem;
+    }
+
+    .image .written {
+        color: white;
+        font-family: 'Secular One', sans-serif;
+        font-size: 29px;
+        margin-top: -2rem;
+        margin-left: 66rem;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 700;
+        line-height: 26.4px;
+    }
+
+    div.written2 {
+        color: white;
+        font-family: 'Secular One', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 700;
+        line-height: 26.4px;
+        margin-left: 9rem;
+        margin-top: -20px;
+        margin-right: auto;
+        margin-bottom: 3rem;
+
+    }
+
+    div.written2 a {
+        color: dodgerblue;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="container1">
+            <nav class="nav">
+
+                <ul class="nav-list">
+                    <li>
+                        <a href="cosmosmainpage.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="contactus.html" class="nav-link">Contact Us</a>
+                    </li>
+
+
+                </ul>
+                <div id="searchbar-opt" class="search-opt">
+                    <input type="search" id="searchin-opt" name="s" placeholder="  Search..."
+                        aria-label="search through the site content">
+                    <a class="search-btn" href="#"><i class="fa fa-search only-for-search-icon" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="login.html" class="nav-link">Login</a>
+                    <div class="divider-symbol"></div>
+                    <a href="Sign-up.html" class="nav-link">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="image">
+        <img src="logo.png" alt="COSMOS">
+        <p class="written">-- WHAT'S BEYOND THE SKY !</p>
+    </div>
+    <section class="contactus-box">
+        <div class="contact-title">
+            <h1>Contact Us</h1>
+        </div>
+        <div class="username-title">
+            <span class="span-for-all only-name-input">Username:</span>
+            <input type="text" class="input-for-all only-username-input" required>
+        </div>
+        <div class="email-title">
+            <span class="span-for-all ">E-mail :</span>
+            <input type="text" class="input-for-all only-email-input" required>
+        </div>
+        <div class="message-title">
+            <span class="span-for-all ">Query:</span>
+
+            <textarea name="textarea" class="input-for-all only-message-input" placeholder="Suggestions...."
+                required></textarea>
+        </div>
+        <div class="only-for-border">
+            <input type="submit" value="Submit">
+        </div>
+        <div class="written2">
+            Not a certified member ? <a href="Sign-up.html"> Join us</a>
+        </div>
+
+
+    </section>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
+    </script>
+</body>
+
+</html>

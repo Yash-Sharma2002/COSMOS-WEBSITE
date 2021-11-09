@@ -1,0 +1,83 @@
+In localhost sql
+
+
+CREATE DATABASE cosmos;
+
+
+CREATE TABLE signup (
+  signup_id INTEGER NOT NULL AUTO_INCREMENT,
+  first_name VARCHAR(128),
+  last_name VARCHAR(128),
+  password VARCHAR(128),
+  email VARCHAR(128),
+  gender VARCHAR(128),
+  pnum INTEGER(12),
+  address VARCHAR(300),
+  postal_code INTEGER(12),
+  
+ PRIMARY KEY (signup_id)
+  INDEX (email)
+
+)
+
+-----------------------------------Current data base yahi tk h iske aage me zara advanced ke liye krra tha . If we host thaty website some day.----------------------------------------
+
+
+CREATE TABLE extras (
+  signup_id INTEGER NOT NULL,
+  email VARCHAR(128),
+  image VARBINARY(2097152),
+  bio VARCHAR(256),
+  FOREIGN KEY (signup_id)  REFERENCES signup (signup_id)
+  ON DELETE CASCADE ON UPDATE CASCADE
+) 
+
+
+CREATE TABLE profile (
+  signup_id INTEGER NOT NULL ,
+  first_name VARCHAR(128),
+  last_name VARCHAR(128),
+  password VARCHAR(128),
+  email VARCHAR(128),
+  gender VARCHAR(128),
+  pnum INTEGER(12),
+  address VARCHAR(300),
+  postal_code INTEGER(12),
+  bio TEXT(200),
+    INDEX (email),
+  FOREIGN KEY (signup_id)
+  REFERENCES users (signup_id),
+ 
+
+  ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+
+
+
+    <!--  <?php
+  $msg = "";
+  
+  // If upload button is clicked ...
+  if (isset($_POST['profile'])) {
+  
+    // $filename = $_FILES["uploadfile"]["name"];
+    // $tempname = $_FILES["uploadfile"]["tmp_name"];    
+    //     $folder = "image/".$filename;
+          
+  
+        // Get all the submitted data from the form
+        $sql = "INSERT INTO extras (image,signup_id) VALUES (:img,:sid) ";
+  
+        $stmt1 = $pdo->query($sql);
+        $stmt->execute(
+            array(
+                ':img' => $_POST['profile'],
+                ':s_id' => $_GET['signup_id']
+
+        // Now let's move the uploaded image into the folder: image
+            )
+    );
+  }
+  $result =  $pdo->query("SELECT image,bio FROM extras");
+?> --> 

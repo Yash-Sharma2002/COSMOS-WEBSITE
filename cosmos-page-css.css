@@ -1,0 +1,651 @@
+/*-----------Scroll Bar--------  */
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+ border: 7px solid darkslateblue;
+ box-shadow: inset 0 0 2.5px 2px rgba(0, 0,0, 0);   
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(
+        45deg,
+       #06dee1,
+       #79ff6c);
+    border-radius: 1rem;
+}
+
+/*------x---------Scroll Bar----x------ */
+/* --------Body Background----------- */
+/* body{
+    background-image:url('background.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    margin: 0px;
+    padding: 0%;
+    position: relative;
+} */
+
+
+
+
+body{
+    background-color: #151515;
+}
+
+*::before,
+*::after{
+margin: 0;
+padding: 0;
+font-size: 16px;
+box-sizing: border-box;
+
+}
+
+html{
+font-family: 'Roboto', sans-serif;
+font-size: 10px;
+}
+
+/* ----x--------Body Background------x-------- */
+
+/* ----------------Navigation Bar----------------- */
+
+header{
+  background-color: #151515;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+transition: background-color .5s ease;
+z-index: 1000;
+border-bottom: 3px solid white;
+}
+
+.container{
+
+padding: 0 ;
+background-color: #151515;
+margin-left: auto;
+margin-right: 9rem;
+
+}
+
+.nav{
+width: 100%;
+height: 9rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-bottom: 2px solid rgba(255,255,255,.05);
+transition: height .5s ease;
+background-color: #151515;
+/* float: left; */
+}
+
+.nav a{
+text-decoration: none;
+color: #fff;
+font-size: 1.6rem;
+background-color: #151515;
+}
+
+
+.nav-list{
+list-style: none;
+display: flex;
+margin-right: auto;
+margin-left: 4rem;
+background-color: #151515;
+}
+
+.nav-link{
+margin: 0 2rem;
+position: relative;
+}
+
+
+
+
+
+.nav-link::after{
+content: '';
+width: 100%;
+height: 2px;
+background-color: #fff;
+position: absolute;
+left: 0;
+bottom: -3px;
+transform: scaleX(0);
+transform-origin: left;
+transition: transform .5s ease;
+}
+
+.nav-link:hover::after{
+transform: scaleX(1);
+}
+
+
+
+
+
+/*-----------------Apply styles after scroll---------------*/
+.scrolling-active{
+
+box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+}
+
+.scrolling-active .nav{
+height: 6.6rem;
+}
+
+.scrolling-active .nav a{
+color: white;
+}
+
+.scrolling-active .search-opt {
+  height: 30px;
+  top: 33px;
+
+}
+
+.scrolling-active .search-btn {
+  height: 30px;
+}
+
+
+.scrolling-active .nav-link::after{
+background-color: white;
+}
+
+
+
+
+.search-opt::after {
+  position: fixed;
+  
+}
+
+.search-opt {
+  left: 49%;
+  background: #ffffff;
+  height: 35px;
+  border-radius: 5px;
+  padding: 10px;
+  top: 47px;
+  transition-delay: .1s;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+.search-btn {
+  /* display: block; */
+  position: relative;
+  float: right;
+  /* color: green; */
+  width: 40px;
+  height: 35px;
+  border-radius: 10%;
+  background: #151515;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.search-opt:hover>#searchin-opt {
+  width: 240px;
+  padding: 0px 6px;
+}
+
+.search-opt:hover>.search-btn {
+  background: white;
+  color: #151515;
+}
+
+#searchin-opt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0px;
+  /* font-size: 16px; */
+  color: black;
+  /* font-weight: 600; */
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+
+/* .only-for-search-icon {
+  font-size: 20px;
+  font-weight: 700;
+} */
+
+
+
+
+/*------------------------Apply styles after scroll end------------*/
+
+.divider-symbol {
+display: inline-block;
+    width: 2px;
+    height: 29px;
+    background-color: white;
+    margin: -7px 0;
+}
+
+
+
+
+/*--------------------Hero Demo Content-----------------------*/
+.logo{
+width: 100%;
+height: 100vh;
+
+background-image: url("logo.png");
+
+
+min-height: 500px; 
+
+
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+
+}
+
+.logo::after{
+content: '';
+width: inherit;
+height: inherit;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+
+
+/* is demo content waale section se ham poore ka color change kr skte h to isse kr den aur dekh lena kon sa badiya h  */
+.demo-content{
+width: 101%;
+/* background-color: #fff; */
+background-image: url("background.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+margin: 0px -1rem;
+}
+
+
+
+
+
+
+/*--------------------Hero end---------------*/
+
+
+/* -------x----Navigation Bar-------x------- */
+
+/*-------------Main Options------------ */
+ 
+
+#main-opt-items{
+  padding-top: 4rem;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+    display: grid;
+    grid-template-columns:24% 24% 24% 24% ; 
+
+}
+.opt-main{
+  color: white;
+  border: 3px solid #ffff;
+  border-radius: 1rem;
+  font-family: 'Bangers', cursive; font-size: 44px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+  text-decoration: none;
+  text-align: center; 
+  margin: 2%;
+}
+#space-blogs-opt-main, #wallpapers-opt-main, #research-opt-main, #profile-opt-main{
+    padding: 100px 0px;
+}
+
+/* --------x-------Main Options-----x---------- */
+/* -------------Trending Section------------- */
+
+.trending-section-opt{
+    display: block;
+    color: white;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    font-family: 'Secular One', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;   
+    /* padding-left: 2rem; */
+    margin-top: 3rem;
+    box-sizing: content-box;
+    margin-left: 10px;
+    margin-right: 130rem;
+   
+    
+}
+#trending-opt{
+    text-decoration: none;
+    padding: 5px 2rem;
+} 
+
+/*this is hover section for blogs heading in last if you dont want it then make it comment dont delete it */
+
+.trending-section-opt:hover { 
+    color: black;
+    background-color: white;
+    border: 3px solid black;
+    margin-right: 130rem;
+ }
+#trending-scroll-opt{
+    display: block;
+    border: 3px solid white;
+    border-radius: 1rem;
+    padding-top: 20rem;
+    margin-left: 4.4rem;
+    margin-top: 3rem;
+    margin-right: 4rem;
+    text-decoration: none;
+}
+/*--------x------Trending Section--------x------- */
+/* --------------Blog Section--------------- */
+#blog_opt_section{
+    display: block;
+    color: white;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    font-family: 'Secular One', sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;   
+    /* padding-left: 2rem; */
+    margin-top: 3rem;
+    box-sizing: content-box;
+    margin-left: 10px;
+    text-decoration: none;
+    margin-right: 131rem;
+     padding: 5px 2rem;
+
+}
+ #blog_opt_section:hover{ /*this is hover section for blogs heading in last if you dont want it then make it comment dont delete it */
+    color: black;
+    background-color: white;
+    border: 3px solid black;
+}
+/*--------------Blog Boxes---------------*/
+
+/*-------------slider---------------*/
+.post-slider {
+  margin-top: 2rem;
+    position: relative;
+  
+}
+
+.post-slider .post-wrapper {
+    width: 92%;
+    height: 350px;
+    margin: 0px auto;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+
+.post-slider .post-wrapper .post {
+    width: 332px;
+    height: 350px;
+    margin: 0px 10px;
+    display: inline-block;
+    background: #006669;
+}
+
+.head-txt {
+    font-family: "Arial Black", "Arial Bold", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+    cursor: pointer;
+}
+
+
+.post:hover{
+color: red;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-slider .post-wrapper .post {
+    width: 403px;
+    height: 330px;
+    margin: 0px 8px;
+    display: inline-block;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1rem -1rem black;
+}
+
+.post-slider .post-wrapper .post .post-info {
+    height: 130px;
+    padding: 0px 5px;
+}
+
+.post-slider .post-wrapper .post .slider-image {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.post-slider .next {
+    position: absolute;
+    right: 20px;
+    /* background: none; */
+    top: 50%;
+    z-index: 100;
+    font-size: 2em;
+    color:white;
+    cursor: pointer
+    
+}
+
+.post-slider .prev {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    z-index: 100;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+  span.mg-3{
+    margin-left: -6px
+  }
+
+  .username-symbol {
+    margin-left: 27px;
+    margin-top: 8px;
+  }
+
+
+/* --------x--------Blog Box----------x-------- */
+/* --------x--------Blog Section----------x-------- */
+
+
+/* ----------------Footer Section------------------ */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+footer{
+  /* position: fixed; */
+  color: #fff;
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+  /* margin-top: 3rem; */
+}
+.main-content{
+  display: flex;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #f12020;
+  top: -10px;
+}
+.left .content p{
+  text-align: justify;
+}
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+.left .content .social a{
+  padding: 0 2px;
+}
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover{
+  background: #f12020;
+}
+.center .content .fas{
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover{
+  background: #f12020;
+  color: #fff;
+  
+}
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone{
+  margin: 15px 0;
+}
+.right form .text{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+.right form .msg{
+  margin-top: 10px;
+}
+.right form input, .right form .msgForm{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+.right form input:focus,
+.right form .msgForm:focus{
+  outline-color: #3498db;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btn{
+  margin-top: 10px;
+}
+.right form .btn button{
+  color: white;
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f12020;
+  font-family: 'Secular One', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+  
+  cursor: pointer;
+  transition: transform .5s ease-in-out;
+}
+.right form .btn button:hover{
+  background: white;
+  color: black;
+  font-size: 24px;
+  transform: scaleX(1);
+}
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span{
+  color: #656565;
+}
+.bottom center a{
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
+/* ------x---Home Page Ends For me-------x------ */
+
+
+
+
+ 
+
